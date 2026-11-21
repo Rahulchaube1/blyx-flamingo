@@ -1,0 +1,33 @@
+use axisrange;
+use tickstep;
+
+fn flamingo_finite(values: vector) -> bool {
+    let mut i = 0;
+    while i < len(values) {
+        let value = at(values, i);
+        if !(value - value == 0.0) {
+            return false;
+        }
+        i += 1;
+    }
+    true
+}
+
+fn flamingo_compute(samples: vector, include_zero: f64, intervals: f64) -> vector {
+    let domain = axisrange_extent(samples, include_zero);
+    if len(domain) == 0 {
+        return [];
+    }
+    tickstep_cover(at(domain, 0), at(domain, 1), intervals)
+}
+
+// Produce chart-ready axis limits and labeled tick spacing from raw data.
+// Returns [first tick, last tick, step, tick count]. The tick count can differ from the requested interval target.
+pub fn flamingo_axis(samples: vector, include_zero: f64, intervals: f64) -> vector {
+    if !flamingo_finite(samples) { return []; }
+    if !(include_zero >= 0.0 && include_zero <= 9007199254740991.0 && include_zero % 1.0 == 0.0) { return []; }
+    if !(intervals >= 1.0 && intervals <= 9007199254740991.0 && intervals % 1.0 == 0.0) { return []; }
+    let result = flamingo_compute(samples, include_zero, intervals);
+    if !flamingo_finite(result) { return []; }
+    result
+}

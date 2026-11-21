@@ -1,10 +1,14 @@
-<img src="assets/logo.png" width="112" height="112" alt="Flamingo logo">
+<img src="assets/logo.png" width="112" height="112" alt="A coral flamingo bends its neck above a black-tipped bill.">
 
 # Flamingo
 
 Produce chart-ready axis limits and labeled tick spacing from raw data. This Blyx workflow framework is part of the numerics and visualization collection.
 
 A constant series collapses a chart axis; raw decimal steps make labels hard to read. Expand the domain before choosing a tick lattice. [D3, ticks and steps](https://d3js.org/d3-array/ticks)
+
+## Editor extension
+
+Install **RahulChaube.blyx-flamingo** to run the worked example and use the framework’s function completions in a Blyx file. Open an empty `.blyx` file, enter `blyx-flamingo-demo`, then choose **Blyx: Run File**. [Editor downloads](https://www.blyx-lang.space/packages/flamingo#editor) · [Download the extension](https://github.com/Rahulchaube1/blyxxxx/releases/download/framework-editors-v0.1.0/blyx-flamingo-0.1.0.vsix) · [Starter with framework source](https://github.com/Rahulchaube1/blyxxxx/releases/download/framework-editors-v0.1.0/blyx-flamingo-starter-0.1.0.zip)
 
 ## Install and run
 
@@ -82,7 +86,7 @@ This release includes identical copies of both library modules so a tagged clone
 
 ## Verification and contributions
 
-The regression suite in [tests.blyx](tests.blyx) checks the example, boundary cases and invalid inputs. Include a short reproducer and your compiler version in [an issue](https://github.com/Rahulchaube1/blyx-flamingo/issues). The source is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE). The package artwork uses [Lucide icons](https://lucide.dev/license); see [artwork notices](assets/NOTICE.txt).
+The regression suite in [tests.blyx](tests.blyx) checks the example, boundary cases and invalid inputs. Include a short reproducer and your compiler version in [an issue](https://github.com/Rahulchaube1/blyx-flamingo/issues). The source is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE). The [artwork notice](assets/NOTICE.txt) records credits for earlier editions.
 
 ## Connect with Rahul Chaube
 
